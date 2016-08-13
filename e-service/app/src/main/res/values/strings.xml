@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">E-Service CPC</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_examen_selected">Titre examen</string>
+    <string name="montant_examen_selected">2500 fcfa</string>
+    <string name="date_examen_selected">1 Jour</string>
+    <string name="title_total_examen">Total</string>
+
+    <string name="send_examens_selected">PROCEED CHECKOUT</string>
+</resources>
