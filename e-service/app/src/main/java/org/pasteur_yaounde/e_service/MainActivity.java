@@ -1,6 +1,7 @@
 package org.pasteur_yaounde.e_service;
 
-import android.app.Activity;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,8 +22,7 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.Toast;
 
 import org.pasteur_yaounde.e_service.capture.TakePhotoMainActivity;
-
-import butterknife.OnClick;
+import org.pasteur_yaounde.e_service.utils.Utils;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     // Variable qui contiendra notre context
@@ -35,12 +35,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FloatingActionButton boutonAddPhotoEService = null;
     private RecyclerView recyclerViewEService = null;
 
-    private boolean pendingIntroAnimation;
+    /*private boolean pendingIntroAnimation;
+    private static final int ANIM_DURATION_FAB = 400;
+    private static final int ANIM_DURATION_TOOLBAR = 300;
+
+    private File mFichierPhoto;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    static final int REQUEST_TAKE_PHOTO = 1;
+    private String mCurrentPhotoPath;
+    private ImageView imageViewPhoto;
+
+    private static final int SELECT_PICTURE = 1;*/
 
     public static final String ACTION_SHOW_LOADING_ITEM = "action_show_loading_item";
-
-    private static final int ANIM_DURATION_TOOLBAR = 300;
-    private static final int ANIM_DURATION_FAB = 400;
+    // private static final int PHOTO_RESULT = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             @Override
             public void onDrawerClosed(View drawerView) {
-                // if((gdsPosition >= 0) && (gdsPosition <= 4))
                 /*if(gdsFilsActuel >= 0)
                     // Retourne le titre en fonction du Spinner majoritaire (celui qui inssoufle la recherche)
                     getActionBar().setTitle(gdsListTitreArray[gdsFilsActuel]);
@@ -103,28 +110,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Action permettant d'afficher l'icone de navigation
         toggleEService.syncState();
 
+        /*if (savedInstanceState == null) {
+            pendingIntroAnimation = true;
+        }*/
+
         boutonAddPhotoEService = (FloatingActionButton) findViewById(R.id.charge_new_photo);
         boutonAddPhotoEService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Action permettant d'aller prendre une photo", Snackbar.LENGTH_LONG).
                                                                         setAction("Action", null).show();
-                prendrePhoto(view);
+                //
+                allerPrendrePhoto();
             }
         });
     }
 
-    public void prendrePhoto(View view) {
-        Snackbar.make(view, "Action permettant d'aller prendre une photo", Snackbar.LENGTH_LONG).
-                setAction("Action", null).show();
+    public void allerPrendrePhoto() {
         int[] startingLocation = new int[2];
         boutonAddPhotoEService.getLocationOnScreen(startingLocation);
         startingLocation[0] += boutonAddPhotoEService.getWidth() / 2;
-
-        afficheTost(contextEService, "Action permettant d'aller prendre une photo");
-
         TakePhotoMainActivity.startCameraFromLocation(startingLocation, this);
         overridePendingTransition(0, 0);
+        afficheTost(contextEService, "Disposition des éléments. Vais-je faire une photo?");
     }
 
     @Override
@@ -139,10 +147,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreateOptionsMenu(menu);
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        if (pendingIntroAnimation) {
-            pendingIntroAnimation = false;
-            // startIntroAnimation();
-        }
         return true;
     }
 
@@ -186,56 +190,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    private void startIntroAnimation() {
-        boutonAddPhotoEService.setTranslationY(2 * getResources().getDimensionPixelOffset(R.dimen.btn_fab_size));
-
-        // int actionbarSize = Utils.dpToPx(56);
-        // getToolbar().setTranslationY(-actionbarSize);
-        // getIvLogo().setTranslationY(-actionbarSize);
-        // getInboxMenuItem().getActionView().setTranslationY(-actionbarSize);
-
-        /*getToolbar().animate()
-                .translationY(0)
-                .setDuration(ANIM_DURATION_TOOLBAR)
-                .setStartDelay(300);*/
-
-        /*getIvLogo().animate()
-                .translationY(0)
-                .setDuration(ANIM_DURATION_TOOLBAR)
-                .setStartDelay(400);*/
-
-        /*getInboxMenuItem().getActionView().animate()
-                .translationY(0)
-                .setDuration(ANIM_DURATION_TOOLBAR)
-                .setStartDelay(500)
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        startContentAnimation();
-                    }
-                })
-                .start();*/
-    }
-
-    private void startContentAnimation() {
-        boutonAddPhotoEService.animate()
-                .translationY(0)
-                .setInterpolator(new OvershootInterpolator(1.f))
-                .setStartDelay(300)
-                .setDuration(ANIM_DURATION_FAB)
-                .start();
-        // feedAdapter.updateItems(true);
-    }
-
-    /*@OnClick(R.id.charge_new_photo)
-    public void onTakePhotoClick() {
-        int[] startingLocation = new int[2];
-        boutonAddPhotoEService.getLocationOnScreen(startingLocation);
-        startingLocation[0] += boutonAddPhotoEService.getWidth() / 2;
-        // TakePhotoMainActivity.startCameraFromLocation(startingLocation, this);
-        overridePendingTransition(0, 0);
-    }*/
 
     /**
      *
