@@ -2,10 +2,14 @@ package org.pasteur_yaounde.e_service;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,9 +20,18 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import org.pasteur_yaounde.e_service.abstrait.AlbumStorageDirFactory;
+import org.pasteur_yaounde.e_service.abstrait.BaseAlbumDirFactory;
+import org.pasteur_yaounde.e_service.abstrait.FroyoAlbumDirFactory;
 import org.pasteur_yaounde.e_service.capture.TakePhotoMainActivity;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     // Variable qui contiendra notre context
@@ -29,7 +42,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerEService = null;
     private ActionBarDrawerToggle toggleEService = null;
     private FloatingActionButton boutonAddPhotoEService = null;
+    private FloatingActionButton boutonAddPhotoEService_1 = null;
     private RecyclerView recyclerViewEService = null;
+
+    /*************************************************************************************/
+    private File mFichier;
+    private ImageView image;
+    private static final int PHOTO_RESULT = 0;
+
+    private ImageView mImageView;
+    // static final int REQUEST_IMAGE_CAPTURE = 1;
+    static final int REQUEST_TAKE_PHOTO = 1;
+    private String mCurrentPhotoPath;
+    private Bitmap imageBitmap;
+
+    private static final String JPEG_FILE_PREFIX = "IMG_";
+    private static final String JPEG_FILE_SUFFIX = ".jpg";
+
+    private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
+     /*************************************************************************************/
 
     /*private boolean pendingIntroAnimation;
     private static final int ANIM_DURATION_FAB = 400;
@@ -45,7 +76,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public static final String ACTION_SHOW_LOADING_ITEM = "action_show_loading_item";
     // private static final int PHOTO_RESULT = 0;
+    /***
+     ******************************************************************************************************
+     */
 
+    /*private void setBtnListenerOrDisable(FloatingActionButton flbtn,
+                                         FloatingActionButton.OnClickListener onClickListener, String intentName) {
+        if (isIntentAvailable(this, intentName))    flbtn.setOnClickListener(onClickListener);
+        else {
+            btn.setText(getText(R.string.cannot).toString() + " " + flbtn.getText());
+            btn.setClickable(false);
+        }
+    }*/
+
+    /**
+     ******************************************************************************************************
+     */
+
+    /***
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,14 +161,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             pendingIntroAnimation = true;
         }*/
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO)    mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
+        else     mAlbumStorageDirFactory = new BaseAlbumDirFactory();
+
         boutonAddPhotoEService = (FloatingActionButton) findViewById(R.id.charge_new_photo);
         boutonAddPhotoEService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Action permettant d'aller prendre une photo", Snackbar.LENGTH_LONG).
-                                                                        setAction("Action", null).show();
-                //
                 allerPrendrePhoto();
+            }
+        });
+
+        boutonAddPhotoEService_1 = (FloatingActionButton) findViewById(R.id.charge_new_photo_1);
+        boutonAddPhotoEService_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent();
             }
         });
     }
@@ -128,7 +187,89 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startingLocation[0] += boutonAddPhotoEService.getWidth() / 2;
         TakePhotoMainActivity.startCameraFromLocation(startingLocation, this);
         overridePendingTransition(0, 0);
-        afficheTost(contextEService, "Disposition des éléments. Vais-je faire une photo?");
+        // afficheTost(contextEService, "Disposition des éléments. Vais-je faire une photo?");
+    }
+
+    /**
+     *
+     * @return
+     * @throws IOException
+     */
+    private File createImageFile() throws IOException {
+        // Création du nom de l'image qui sera prise
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        // prefixe
+        String imageFileName = JPEG_FILE_PREFIX + timeStamp + "_";
+        // Chemin de stockage ou dossier
+        File albumF = getAlbumDir();
+        File imageF = File.createTempFile(imageFileName, JPEG_FILE_SUFFIX, albumF);
+        return imageF;
+    }
+
+    /**
+     * Photo album for this application
+     */
+    private String getAlbumName() {
+        return getString(R.string.album_name);
+    }
+
+    /**
+     *
+     * @return
+     */
+    private File getAlbumDir() {
+        File storageDir = null;
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+            storageDir = mAlbumStorageDirFactory.getAlbumStorageDir(getAlbumName());
+            if (storageDir != null) {
+                if (! storageDir.mkdirs()) {
+                    if (! storageDir.exists()){
+                        afficheTost(contextEService, "Echec de la création du dossier");
+                        return null;
+                    }
+                }
+            }
+        } else    afficheTost(contextEService, "L'espace de stockage externe non monté.");
+        return storageDir;
+    }
+
+    /**
+     *
+     */
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        // Ensure that there's a camera activity to handle the intent
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            // Créer le fichier où ira la photo
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+                // Enregistrer un fichier : chemin d'accès pour une utilisation avec l'intents ACTION_VIEW
+                mCurrentPhotoPath = photoFile.getAbsolutePath();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+                ex.printStackTrace();
+                mCurrentPhotoPath = null;
+            }
+            // Continue only if the File was successfully created
+            if (photoFile != null) {
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
+                setResult(RESULT_OK, takePictureIntent);
+                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+            if (data != null) {
+                Bundle extras = data.getExtras();
+                imageBitmap = (Bitmap) extras.get("data");
+                // mImageView.setImageBitmap(imageBitmap);
+                afficheTost(contextEService, "L'image :: " + imageBitmap + " :: bien reçu pour son affichage");
+            } else    afficheTost(contextEService, "Aucun intent récupéré...");
+        }
     }
 
     @Override

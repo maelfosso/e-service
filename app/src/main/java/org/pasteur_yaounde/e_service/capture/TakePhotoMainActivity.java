@@ -1,6 +1,7 @@
 package org.pasteur_yaounde.e_service.capture;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.os.Build;
 import android.os.Handler;
@@ -36,6 +37,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 // import hugo.weaving.DebugLog;
 
+import org.pasteur_yaounde.e_service.MainActivity;
 import org.pasteur_yaounde.e_service.R;
 import org.pasteur_yaounde.e_service.utils.Utils;
 import org.pasteur_yaounde.e_service.adapter.PhotoFiltersAdapter;
@@ -71,12 +73,16 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         Intent intent = new Intent(startingActivity, TakePhotoMainActivity.class);
         intent.putExtra(ARG_REVEAL_START_LOCATION, startingLocation);
         startingActivity.startActivity(intent);
+        MainActivity.afficheTost(startingActivity, "Bonjour à tous...");
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_photo);
+
+        MainActivity.afficheTost(this, "Disposition des éléments. Vais-je faire une photo?");
+
         updateStatusBarColor();
         setupRevealBackground(savedInstanceState);
         setupPhotoFilters();
@@ -95,9 +101,9 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void updateStatusBarColor() {
-        if (Utils.isAndroid5()) {
+        /*if (Utils.isAndroid5()) {
             getWindow().setStatusBarColor(0xff111111);
-        }
+        }*/
     }
 
     private void setupRevealBackground(Bundle savedInstanceState) {

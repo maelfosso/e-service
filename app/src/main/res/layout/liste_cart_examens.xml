@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginTop="?attr/actionBarSize" >
+    android:layout_marginTop="?attr/actionBarSize">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/liste_cart_examens"
@@ -70,5 +71,25 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/my_button"
         android:text="@string/send_examens_selected"/>
+
+    <!-- <org.pasteur_yaounde.e_service.utils.font.RobotoTextView
+        android:id="@+id/btn_valid_commande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:textSize="22dip"
+        android:paddingTop="15dp"
+        android:paddingLeft="60dp"
+        app:typeface="robotoMedium"
+        android:paddingRight="60dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/texte_color"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/send_examens_selected"
+        android:background="@drawable/transparent_button_selector" /> -->
 
 </RelativeLayout>

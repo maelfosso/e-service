@@ -1,6 +1,7 @@
 package org.pasteur_yaounde.e_service;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -38,6 +39,8 @@ public class CartMainActivity extends AppCompatActivity implements NavigationVie
 
         // Initialisation de la variable qui contient notre context
         contextEService = this;
+        // TODO Use fields...
+        // Typeface sRobotoThin = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
 
         navigationViewEService = (NavigationView) findViewById(R.id.nav_cart_view);
         navigationViewEService.setNavigationItemSelectedListener(this);
