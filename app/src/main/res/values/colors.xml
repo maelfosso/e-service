@@ -3,4 +3,19 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="fab_color_pressed">#007787</color>
+    <color name="texte_color">#212121</color>
+
+    <!-- Couleurs des différents boutons dans E-Service -->
+    <color name="button_color_0">#5c6bc0</color>
+    <color name="button_color_1">#324ba0</color>
+    <color name="button_color_2">#668ce0</color>
+    <color name="button_color_3">#5677ca</color>
+    <color name="button_color_4">#8bacf0</color>
+
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+    <color name="btn_context_menu_normal">#ffffff</color>
+    <color name="btn_context_menu_pressed">#40000000</color>
 </resources>
