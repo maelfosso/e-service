@@ -25,4 +25,12 @@
     <dimen name="default_elevation">8dp</dimen>
     <dimen name="recycler_item_size">192dp</dimen>
     <dimen name="publish_photo_thumbnail_size">96dp</dimen>
+
+
+    <dimen name="action_menu_radius">40dp</dimen>
+    <dimen name="action_button_size">72dp</dimen>
+    <dimen name="action_button_margin">12dp</dimen>
+    <dimen name="sub_action_button_size">40dp</dimen>
+    <dimen name="action_button_content_margin">16dp</dimen>
+    <dimen name="sub_action_button_content_margin">6dp</dimen>
 </resources>

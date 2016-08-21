@@ -26,6 +26,7 @@
                 android:text="SHARE TO"
                 android:textColor="#333333"
                 android:textSize="18sp" />
+
         </android.support.v7.widget.Toolbar>
 
         <LinearLayout

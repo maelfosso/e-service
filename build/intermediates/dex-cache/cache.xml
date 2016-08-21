@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="41e9188dbf29ecc786e40a12c7af6a428ed36f99">
-        <dex dex="/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_7852eb0c92a8ed650a700f73fa1cffb4c173018f.jar" />
-    </item>
-
-</items>
+<items version="2" />

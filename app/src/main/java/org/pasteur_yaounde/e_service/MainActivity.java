@@ -76,22 +76,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public static final String ACTION_SHOW_LOADING_ITEM = "action_show_loading_item";
     // private static final int PHOTO_RESULT = 0;
-    /***
-     ******************************************************************************************************
-     */
-
-    /*private void setBtnListenerOrDisable(FloatingActionButton flbtn,
-                                         FloatingActionButton.OnClickListener onClickListener, String intentName) {
-        if (isIntentAvailable(this, intentName))    flbtn.setOnClickListener(onClickListener);
-        else {
-            btn.setText(getText(R.string.cannot).toString() + " " + flbtn.getText());
-            btn.setClickable(false);
-        }
-    }*/
-
-    /**
-     ******************************************************************************************************
-     */
 
     /***
      *
@@ -185,9 +169,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int[] startingLocation = new int[2];
         boutonAddPhotoEService.getLocationOnScreen(startingLocation);
         startingLocation[0] += boutonAddPhotoEService.getWidth() / 2;
+        // afficheTost(contextEService, "La position 11::== " + startingLocation[0] + "\n La position 22:: " + startingLocation[1]);
         TakePhotoMainActivity.startCameraFromLocation(startingLocation, this);
         overridePendingTransition(0, 0);
-        // afficheTost(contextEService, "Disposition des éléments. Vais-je faire une photo?");
     }
 
     /**
@@ -320,9 +304,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.affichage_panier_cart)    startActivity(new Intent(contextEService, CartMainActivity.class));
         else if (id == R.id.affichage_promotion_examen) {
-
+            /*startActivity(new Intent(contextEService, PrendrePhotoMainActivity.class));
+            int[] startingLocation = new int[]{322, 561};
+            PrendrePhotoMainActivity.startCameraFromLocation(startingLocation, this);
+            overridePendingTransition(0, 0);*/
         }
-
+        
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_main);
         drawer.closeDrawer(GravityCompat.START);
         return true;
