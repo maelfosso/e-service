@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">E-Service CPC</string>
     <string name="title_activity_main">MainActivity</string>
+
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_examen_selected">Titre examen</string>
+    <string name="montant_examen_selected">2500 fcfa</string>
+    <string name="date_examen_selected">1 Jour</string>
+    <string name="title_total_examen">Total</string>
 
+    <string name="send_examens_selected">PROCEED CHECKOUT</string>
+    <string name="album_name">E-Service_CPC</string>
 </resources>
