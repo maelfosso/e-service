@@ -1,55 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_18dp"
+            android:checked="true"
+            android:title="Accueil"/>
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_nav_cart"
+            android:title="@string/menu_cart"
+            app:actionLayout="@layout/menu_counter"/>
+        <item
+            android:id="@+id/nav_new"
+            android:icon="@drawable/ic_nav_new"
+            android:title="@string/menu_new"/>
+        <item
+            android:id="@+id/nav_promo"
+            android:icon="@drawable/ic_nav_promotion"
+            android:title="@string/menu_promotions"/>
 
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
 
 </menu>
 
-
+<!--
         <item
             android:id="@+id/affichage_panier_cart"
             android:icon="@drawable/ic_shopping_cart_black_18dp"
-            android:title="Cart" />
+            android:title="cart" />
         <item
             android:id="@+id/affichage_promotion_examen"
             android:icon="@android:drawable/ic_menu_gallery"
-            android:title="Promotion" />
-        <!-- <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="promotion" />
+        &lt;!&ndash; <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="slideshow" />
         <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
-            android:title="Tools" /> -->
-    </group>
+            android:title="tools" /> &ndash;&gt;
+    </group>-->
 
     <!-- <item android:title="Communicate">
         <menu>
@@ -58,7 +48,7 @@
             <item android:id="@+id/nav_send" android:icon="@android:drawable/ic_menu_send"
                 android:title="Send" />
         </menu>
-    </item> -->
+    </item>
 
-</menu>
+</menu> -->
 

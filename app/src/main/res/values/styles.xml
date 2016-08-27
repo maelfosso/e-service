@@ -10,7 +10,6 @@
         <item name="colorControlHighlight">@color/fab_color_pressed</item>
     </style>
 
-
     <style name="AppTheme.TransparentActivity">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
@@ -39,6 +38,10 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DrawerStyle" parent="AppTheme">
+        <item name="colorControlHighlight">@android:color/transparent</item> 
+    </style>
 
     <style name="list_divider">
         <item name="android:layout_width">fill_parent</item>listDivider

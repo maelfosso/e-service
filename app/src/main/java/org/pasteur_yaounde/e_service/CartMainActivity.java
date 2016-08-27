@@ -21,16 +21,16 @@ import android.widget.TextView;
  */
 public class CartMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     // Variable qui contiendra notre context
-    private Context contextEService = null;
-    private NavigationView navigationViewEService = null;
+    private Context context = null;
+    private NavigationView navigationView = null;
 
-    private Toolbar toolbarEService = null;
-    private DrawerLayout drawerEService = null;
-    private ActionBarDrawerToggle toggleEService = null;
-    private FloatingActionButton boutonAddPhotoEService = null;
-    private RecyclerView recyclerViewEService = null;
-    private TextView totalViewEService = null;
-    private TextView textBoutonViewEService = null;
+    private Toolbar toolbar = null;
+    private DrawerLayout drawer = null;
+    private ActionBarDrawerToggle toggle = null;
+    private FloatingActionButton boutonAddPhoto = null;
+    private RecyclerView recyclerView = null;
+    private TextView totalView = null;
+    private TextView textBoutonView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +38,24 @@ public class CartMainActivity extends AppCompatActivity implements NavigationVie
         setContentView(R.layout.cart_interface_main);
 
         // Initialisation de la variable qui contient notre context
-        contextEService = this;
+        context = this;
         // TODO Use fields...
         // Typeface sRobotoThin = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
 
-        navigationViewEService = (NavigationView) findViewById(R.id.nav_cart_view);
-        navigationViewEService.setNavigationItemSelectedListener(this);
+        navigationView = (NavigationView) findViewById(R.id.nav_cart_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
-        toolbarEService = (Toolbar) findViewById(R.id.toolbar_cart);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_cart);
         // Définition du titre de l'interface
-        toolbarEService.setTitle("Cart");
+        toolbar.setTitle("Cart");
         // Affichage des options dans le Toolbar
-        setSupportActionBar(toolbarEService);
+        setSupportActionBar(toolbar);
 
-        drawerEService = (DrawerLayout) findViewById(R.id.drawer_layout_cart_main);
-        toggleEService = new ActionBarDrawerToggle(
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout_cart_main);
+        toggle = new ActionBarDrawerToggle(
                 this, 						                             /* host Activity */
-                drawerEService,  				                         /* DrawerLayout object */
-                toolbarEService,                                         /* nav drawer image to replace 'Up' caret */
+                drawer,  				                         /* DrawerLayout object */
+                toolbar,                                         /* nav drawer image to replace 'Up' caret */
                 R.string.navigation_drawer_open,                         /* "open drawer" description for accessibility */
                 R.string.navigation_drawer_close)                        /* "close drawer" description for accessibility */
         {
@@ -91,18 +91,18 @@ public class CartMainActivity extends AppCompatActivity implements NavigationVie
                 super.onDrawerStateChanged(newState);
             }
         };
-        drawerEService.setDrawerListener(toggleEService);
+        drawer.setDrawerListener(toggle);
         // Action permettant d'afficher l'icone de navigation
-        toggleEService.syncState();
+        toggle.syncState();
 
-        recyclerViewEService = (RecyclerView) findViewById(R.id.liste_cart_examens);
+        recyclerView = (RecyclerView) findViewById(R.id.liste_cart_examens);
 
-        totalViewEService = (TextView) findViewById(R.id.montant_total_examen);
+        totalView = (TextView) findViewById(R.id.montant_total_examen);
         // Action permettant de prendre le coût total des examens
 
-        textBoutonViewEService = (TextView) findViewById(R.id.btn_valid_commande);
+        textBoutonView = (TextView) findViewById(R.id.btn_valid_commande);
         // Action permettant de prendre le coût total des examens
-        textBoutonViewEService.setOnClickListener(new View.OnClickListener() {
+        textBoutonView.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -133,7 +133,7 @@ public class CartMainActivity extends AppCompatActivity implements NavigationVie
         int id = item.getItemId();
 
         // no inspection SimplifiableIfStatement
-        if (id == R.id.consulter_panier)
+        /*if (id == R.id.consulter_panier)
             // Action permettant de consulter l'état d'un panier d'examen
             return true;
         else{
@@ -146,7 +146,7 @@ public class CartMainActivity extends AppCompatActivity implements NavigationVie
                     return true;
                 }
             }
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -156,11 +156,11 @@ public class CartMainActivity extends AppCompatActivity implements NavigationVie
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.affichage_panier_cart) {
+        /*if (id == R.id.affichage_panier_cart) {
             // Handle the camera action
         } else if (id == R.id.affichage_promotion_examen) {
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_cart_main);
         drawer.closeDrawer(GravityCompat.START);

@@ -3,34 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <!-- <item
+    <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        app:showAsAction="never" /> -->
+        app:showAsAction="never" />
 
     <item
-        android:id="@+id/consulter_panier"
+        android:id="@+id/action_cart"
         android:orderInCategory="100"
-        app:showAsAction="ifRoom|withText"
-        android:title="PANIER"
-        android:icon="@drawable/ic_add_shopping_cart_white_18dp" />
+        app:showAsAction="ifRoom"
+        android:title="@string/action_cart"
+        android:icon="@drawable/ic_menu_cart" />
 
     <item
-        android:id="@+id/filtrer_examens"
+        android:id="@+id/action_filter_category"
         android:orderInCategory="100"
-        app:showAsAction="ifRoom|withText"
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_filter_list_white_18dp"
-        android:title="FILTRER"/>
-
-    <!--
-        app:actionViewClass="android.support.v7.widget.SearchView"  -->
+        android:title="@string/action_filter_category"/>
 
     <item
-        android:id="@+id/rechercher_examen"
+        android:id="@+id/action_search"
         android:orderInCategory="100"
-        app:showAsAction="ifRoom|withText"
-        android:title="RECHERCHER"
+        app:showAsAction="always"
+        android:title="@string/action_search"
         android:icon="@drawable/action_search"
         app:actionViewClass="android.support.v7.widget.SearchView" />
 
