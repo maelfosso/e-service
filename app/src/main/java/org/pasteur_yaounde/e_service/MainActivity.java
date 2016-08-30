@@ -222,6 +222,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.nav_home:    fragment = new ExamsFragment();    break;
             case R.id.nav_cart:    fragment = new CartFragment();    break;
+            case R.id.nav_supervisor:    afficheTost(MainActivity.this, " Bonjour, ou dois-je partir?");
+                // fragment = new CartFragment();
+                break;
             default:    break;
         }
 
