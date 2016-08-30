@@ -104,6 +104,10 @@
         "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_chooser_dialog.xml"
     },
     {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/fragment_ask_cotation.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/fragment_ask_cotation.xml"
+    },
+    {
         "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
         "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
@@ -198,6 +202,10 @@
     {
         "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/ask_cotation.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/ask_cotation.xml"
     },
     {
         "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",

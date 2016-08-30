@@ -772,12 +772,12 @@
         "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/res/drawable-mdpi-v4/ic_plusone_standard_off_client.png"
     },
     {
-        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_stop_white_24.png",
-        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/drawable-mdpi-v4/quantum_ic_stop_white_24.png"
-    },
-    {
         "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_white_24.png",
         "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/drawable-mdpi-v4/quantum_ic_pause_white_24.png"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_stop_white_24.png",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/drawable-mdpi-v4/quantum_ic_stop_white_24.png"
     },
     {
         "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
