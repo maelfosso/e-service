@@ -1,6 +1,10 @@
 package org.pasteur_yaounde.e_service.capture;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.os.Build;
 import android.os.Handler;
@@ -13,6 +17,7 @@ import android.hardware.Camera;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.animation.Animator;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 import android.annotation.TargetApi;
 import android.animation.AnimatorSet;
@@ -30,12 +35,19 @@ import com.commonsware.cwac.camera.PictureTransaction;
 import com.commonsware.cwac.camera.SimpleCameraHost;
 
 import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 // import hugo.weaving.DebugLog;
 
 import org.pasteur_yaounde.e_service.R;
+import org.pasteur_yaounde.e_service.abstrait.AlbumStorageDirFactory;
+import org.pasteur_yaounde.e_service.abstrait.BaseAlbumDirFactory;
+import org.pasteur_yaounde.e_service.abstrait.FroyoAlbumDirFactory;
 import org.pasteur_yaounde.e_service.utils.Utils;
 import org.pasteur_yaounde.e_service.MainActivity;
 import org.pasteur_yaounde.e_service.capture.view.RevealBackgroundView;
@@ -46,6 +58,8 @@ import org.pasteur_yaounde.e_service.utils.floatButtom.FloatingActionMenu;
  * Created by Franck on 10/08/2016.
  */
 public class TakePhotoMainActivity extends BaseActivity implements RevealBackgroundView.OnStateChangeListener, CameraHostProvider {
+    private Context eContext = null;
+
     public static final String ARG_REVEAL_START_LOCATION = "reveal_start_location";
 
     private static final Interpolator ACCELERATE_INTERPOLATOR = new AccelerateInterpolator();
@@ -65,34 +79,27 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
     @Bind(R.id.vShutter) View vShutter;
 
     @Bind(R.id.flipperEltSpace) ViewFlipper flipperActionInterface;
-    private int positionAction = 0;
     @Bind(R.id.voir_galeri) ImageButton btnGallery;
     @Bind(R.id.btnTakePhoto) Button btnCapturePhoto;
     @Bind(R.id.prendre_video) ImageButton btnCaptureVideo;
 
-    @Bind(R.id.envoyer_capture) ImageButton btnEnvoyerPhoto;
+    @Bind(R.id.envoyer_par_mail) ImageButton btnEnvoyerMail;
+    @Bind(R.id.envoyer_par_whatsapp) ImageButton btnEnvoyerWhatsApp;
 
     private boolean pendingIntro;
     private int currentState;
 
     private File photoPath;
 
-    private ImageView btnEnvoiMail = null;
-    private ImageView btnEnvoiWhatsApp = null;
-    private FloatingActionMenu btnFloatMenu = null;
-    private FloatingActionMenu.Builder btnMenuBuild = null;
-    private SubActionButton.Builder rLSubBuilder = null;
+    private static final String JPEG_FILE_PREFIX = "CPC_";
+    private static final String JPEG_FILE_SUFFIX = ".jpg";
 
-    // @Bind(R.id.vUpperPanel) ViewSwitcher vUpperPanel;
-    // @Bind(R.id.vLowerPanel) ViewSwitcher vLowerPanel;
-    // @Bind(R.id.rvFilters) RecyclerView rvFilters;
-    // @Bind(R.id.btnTakePhoto) Button btnTakePhoto;
+    private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
 
     public static void startCameraFromLocation(int[] startingLocation, Activity startingActivity) {
         Intent intent = new Intent(startingActivity, TakePhotoMainActivity.class);
         intent.putExtra(ARG_REVEAL_START_LOCATION, startingLocation);
         startingActivity.startActivity(intent);
-        // MainActivity.afficheTost(startingActivity, "Bonjour à tous...");
     }
 
     @Override
@@ -100,27 +107,37 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_photo);
 
-        // MainActivity.afficheTost(this, "Disposition des éléments. Vais-je faire une photo?");
+        eContext = this;
 
         updateStatusBarColor();
         setupRevealBackground(savedInstanceState);
-        /*setupPhotoFilters();
 
-        vUpperPanel.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO)   mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
+        else    mAlbumStorageDirFactory = new BaseAlbumDirFactory();
+
+        btnEnvoyerMail.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public boolean onPreDraw() {
-                vUpperPanel.getViewTreeObserver().removeOnPreDrawListener(this);
-                pendingIntro = true;
-                vUpperPanel.setTranslationY(-vUpperPanel.getHeight());
-                vLowerPanel.setTranslationY(vLowerPanel.getHeight());
-                return true;
+            public void onClick(View v) {
+                if(v.getId() == R.id.envoyer_par_mail){
+                    MainActivity.afficheTost(eContext, "Envoyer par mail?");
+                    onSendByEmail(new Uri[]{Uri.fromFile(photoPath)});
+                    backToCapture();
+                }
             }
-        });*/
+        });
 
-        btnEnvoiMail = new ImageView(this);
-        btnEnvoiWhatsApp = new ImageView(this);
-        btnEnvoiMail.setImageDrawable(this.getResources().getDrawable(R.drawable.ic_email_white_24dp));
-        btnEnvoiWhatsApp.setImageDrawable(this.getResources().getDrawable(R.drawable.ic_email_white_24dp));
+        btnEnvoyerWhatsApp.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(v.getId() == R.id.envoyer_par_whatsapp){
+                    MainActivity.afficheTost(eContext, "Envoyer par WhatsApp?");
+                    openWhatsappContact("+23795165033");
+                    backToCapture();
+                }
+            }
+        });
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -143,9 +160,7 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
                     return true;
                 }
             });
-        } else {
-            vRevealBackground.setToFinishedFrame();
-        }
+        } else    vRevealBackground.setToFinishedFrame();
     }
 
     @Override
@@ -155,22 +170,8 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
             if (pendingIntro) {
                 // startIntroAnimation();
             }
-        } else {
-            vTakePhotoRoot.setVisibility(View.INVISIBLE);
-        }
+        } else    vTakePhotoRoot.setVisibility(View.INVISIBLE);
     }
-
-    /*private void startIntroAnimation() {
-        vUpperPanel.animate().translationY(0).setDuration(400).setInterpolator(DECELERATE_INTERPOLATOR);
-        vLowerPanel.animate().translationY(0).setDuration(400).setInterpolator(DECELERATE_INTERPOLATOR).start();
-    }
-
-    private void setupPhotoFilters() {
-        PhotoFiltersAdapter photoFiltersAdapter = new PhotoFiltersAdapter(this);
-        rvFilters.setHasFixedSize(true);
-        rvFilters.setAdapter(photoFiltersAdapter);
-        rvFilters.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-    }*/
 
     @Override
     protected void onResume() {
@@ -215,40 +216,39 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         animatorSet.start();
     }
 
-    @OnClick(R.id.envoyer_capture)
-    public void onAcceptClick() {
-        // PublishMainActivity.openWithPhotoUri(this, Uri.fromFile(photoPath));
-        // btnCapturePhoto.setEnabled(false);
-        // btnEnvoyerPhoto.
+    /**
+     * Méthode permettant d'envoyer un message WhatsApp à un numéro précis
+     * @param number
+     */
+    private void openWhatsappContact(String number) {
+        Uri uri = Uri.parse("smsto:" + number);
+        Intent sendIntent = new Intent(Intent.ACTION_SENDTO, uri);
+        sendIntent.setPackage("com.whatsapp");
+        startActivity(Intent.createChooser(sendIntent, ""));
+    }
 
-        MainActivity.afficheTost(this, "Je veux enrégistrer la photo prise...");
-        // Il s'agit ici d'un click prolongé qui a été effectué
-        /*
-        private FloatingActionMenu btnFloatMenu = null;
-        private FloatingActionMenu.Builder btnMenuBuild = null;
-        private SubActionButton.Builder rLSubBuilder = null;
-         */
-        if(btnMenuBuild == null){
-            // Si le menu n'a pas encore été constitué
-            rLSubBuilder = new SubActionButton.Builder(this);
-            // Build the menu with default options: light theme, 90 degrees, 72dp radius. Set 3 default SubActionButtons
-            btnMenuBuild = new FloatingActionMenu.Builder(this);
-            btnEnvoyerPhoto.setImageDrawable(getResources().getDrawable(R.drawable.ic_close_white_24dp));
-            btnMenuBuild.addSubActionView(rLSubBuilder.setContentView(btnEnvoiMail).build());
-            btnMenuBuild.addSubActionView(rLSubBuilder.setContentView(btnEnvoiWhatsApp).build());
-            btnMenuBuild.attachTo(btnEnvoyerPhoto);
-            btnFloatMenu = btnMenuBuild.build();
-        }else{
-            // Si un menu a déjàe été constitué
-            btnFloatMenu.close(true);
-            // Suppression de tous les éléments du menu précédent
-            btnMenuBuild.removeSubActionView();
-            rLSubBuilder = null;
-            btnMenuBuild = null;
-            // Déstruction de la variable du menu flottant
-            btnFloatMenu = null;
-            btnEnvoyerPhoto.setImageDrawable(getResources().getDrawable(R.drawable.ic_add_white_24dp));
+    /**
+     *
+     * @param attachments
+     */
+    private void onSendByEmail(Uri[] attachments) {
+        Intent mailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
+        mailIntent.setType("text/plain");
+        mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"malko1278@yahoo.fr"});
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, "Envoi de photo d'ordonnance");
+        mailIntent.putExtra(Intent.EXTRA_TEXT, "Ici le contenu du message");
+        if(attachments != null) {
+            ArrayList uris = new ArrayList();
+            for(Uri uri: attachments)    uris.add(uri);
+            mailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         }
+        startActivity(Intent.createChooser(mailIntent, "Envoyer un message"));
+    }
+
+    private void backToCapture(){
+        btnCapturePhoto.setEnabled(true);
+        flipperActionInterface.showNext();
+        updateState(STATE_TAKE_PHOTO);
     }
 
     @Override
@@ -296,7 +296,59 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         public void saveImage(PictureTransaction xact, byte[] image) {
             super.saveImage(xact, image);
             photoPath = getPhotoPath();
+
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+                ex.printStackTrace();
+            }
+            // Si le chemin a bien été créé...
+            if (photoFile != null){
+                photoPath.renameTo(photoFile);
+                photoPath = photoFile;
+            }
         }
+    }
+
+    /**
+     * Photo album for this application
+     */
+    private String getAlbumName() {
+        return getString(R.string.album_name);
+    }
+
+    /**
+     *
+     * @return
+     * @throws IOException
+     */
+    private File createImageFile() throws IOException {
+        // Création du nom de l'image qui sera prise
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        // prefixe
+        String imageFileName = JPEG_FILE_PREFIX + timeStamp + "_";
+        // Chemin de stockage ou dossier
+        File albumF = getAlbumDir();
+        File imageF = File.createTempFile(imageFileName, JPEG_FILE_SUFFIX, albumF);
+        return imageF;
+    }
+
+    private File getAlbumDir() {
+        File storageDir = null;
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+            storageDir = mAlbumStorageDirFactory.getAlbumStorageDir(getAlbumName());
+            if (storageDir != null) {
+                if (! storageDir.mkdirs()) {
+                    if (! storageDir.exists()){
+                        // afficheTost(contextEService, "Echec de la création du dossier");
+                        return null;
+                    }
+                }
+            }
+        }
+        return storageDir;
     }
 
     private void showTakenPicture(Bitmap bitmap) {

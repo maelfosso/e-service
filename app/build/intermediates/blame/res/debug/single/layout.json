@@ -1,0 +1,354 @@
+[
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/mr_media_route_controller_material_dialog_b.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_controller_material_dialog_b.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/content_exam_detail.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/content_exam_detail.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/nav_header_main_2.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/nav_header_main_2.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/information_examen.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/information_examen.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/liste_examens.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/liste_examens.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/layout/cast_tracks_chooser_dialog_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/item_photo_filter.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/item_photo_filter.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/row_cart.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/row_cart.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/content_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/content_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_chooser_dialog.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/activity_publish.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/activity_publish.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/app_bar_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/app_bar_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/row_exams.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/row_exams.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/menu_counter.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/menu_counter.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cart_interface_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/cart_interface_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cast_mini_controller.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/layout/cast_mini_controller.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/nav_header_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/content_information_examen.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/content_information_examen.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cast_expanded_controller_activity.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/layout/cast_expanded_controller_activity.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cart_content_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/cart_content_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/activity_exam_detail.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/activity_exam_detail.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/interface_examen_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/interface_examen_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/res/layout/place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cast_help_text.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/layout/cast_help_text.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/res/layout/place_autocomplete_progress.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/activity_take_photo.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/activity_take_photo.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/res/layout/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_row_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/layout/cast_tracks_chooser_dialog_row_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/dialog_cart_detail.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/dialog_cart_detail.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cast_intro_overlay.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/layout/cast_intro_overlay.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/res/layout/place_autocomplete_item_prediction.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/liste_cart_examens.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/liste_cart_examens.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/cart_element_main.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/cart_element_main.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/fragment_cart.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/fragment_exams.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/src/main/res/layout/fragment_exams.xml"
+    },
+    {
+        "merged": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/malko/workspace/Developement/Programmes Android/Projets GitHub/e-service/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    }
+]
