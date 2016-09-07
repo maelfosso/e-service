@@ -10,6 +10,13 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/action_search"
+        android:icon="@drawable/action_search"/>
+
+    <item
         android:id="@+id/action_cart"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"
@@ -23,12 +30,5 @@
         android:icon="@drawable/ic_filter_list_white_18dp"
         android:title="@string/action_filter_category"/>
 
-    <item
-        android:id="@+id/action_search"
-        android:orderInCategory="100"
-        app:showAsAction="always"
-        android:title="@string/action_search"
-        android:icon="@drawable/action_search"
-        app:actionViewClass="android.support.v7.widget.SearchView" />
 
 </menu>
