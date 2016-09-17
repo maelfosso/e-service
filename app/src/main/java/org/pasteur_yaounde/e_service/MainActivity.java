@@ -30,6 +30,7 @@ import android.widget.Toast;
 
 import org.pasteur_yaounde.e_service.adapter.ExamsListAdapter;
 import org.pasteur_yaounde.e_service.data.GlobalVariable;
+import org.pasteur_yaounde.e_service.fragment.AskCotationFragment;
 import org.pasteur_yaounde.e_service.fragment.CartFragment;
 import org.pasteur_yaounde.e_service.fragment.ExamsFragment;
 
@@ -222,8 +223,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.nav_home:    fragment = new ExamsFragment();    break;
             case R.id.nav_cart:    fragment = new CartFragment();    break;
-            case R.id.nav_supervisor:    afficheTost(MainActivity.this, " Bonjour, ou dois-je partir?");
-                // fragment = new CartFragment();
+            case R.id.nav_supervisor:    afficheTost(this, "Voir la liste des demandes de cotation...");
+                fragment = new AskCotationFragment();
                 break;
             default:    break;
         }

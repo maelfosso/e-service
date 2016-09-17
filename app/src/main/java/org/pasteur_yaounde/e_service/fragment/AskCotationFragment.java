@@ -79,7 +79,7 @@ public class AskCotationFragment extends Fragment implements DemandeCotationAdap
 
         @Override
         public void onClick(View v) {
-
+            //
         }
     }
 
