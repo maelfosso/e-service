@@ -3,22 +3,15 @@ package org.pasteur_yaounde.e_service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.PersistableBundle;
-import android.provider.MediaStore;
 import android.support.annotation.IdRes;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.SearchView;
 import android.view.MenuInflater;
 import android.view.View;
@@ -32,41 +25,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.pasteur_yaounde.e_service.abstrait.AlbumStorageDirFactory;
-import org.pasteur_yaounde.e_service.abstrait.BaseAlbumDirFactory;
-import org.pasteur_yaounde.e_service.abstrait.FroyoAlbumDirFactory;
 import org.pasteur_yaounde.e_service.adapter.ExamsListAdapter;
-import org.pasteur_yaounde.e_service.capture.TakePhotoMainActivity;
-import org.pasteur_yaounde.e_service.data.Constant;
 import org.pasteur_yaounde.e_service.data.GlobalVariable;
+import org.pasteur_yaounde.e_service.fragment.AskCotationFragment;
 import org.pasteur_yaounde.e_service.fragment.CartFragment;
 import org.pasteur_yaounde.e_service.fragment.ExamsFragment;
-import org.pasteur_yaounde.e_service.model.Exam;
-import org.pasteur_yaounde.e_service.widget.DividerItemDecoration;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-    private Context context;
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private CoordinatorLayout parentView;
     private NavigationView navigationView;
 
     private Toolbar toolbar, searchToolbar;
     private DrawerLayout drawer;
     private ActionBarDrawerToggle toggle;
-    
-    private FloatingActionButton takePhoto;
+
+    // private FloatingActionButton takePhoto;
     private RecyclerView recyclerView;
 
     private ExamsListAdapter adapter;
@@ -75,38 +51,10 @@ public class MainActivity extends AppCompatActivity
 
     private ExamsFragment f_exams;
     private CartFragment f_cart;
+    private AskCotationFragment f_supervisor;
 
-    /*************************************************************************************/
-    private File mFichier;
-    private ImageView image;
-    private static final int PHOTO_RESULT = 0;
-
-    private ImageView mImageView;
-    // static final int REQUEST_IMAGE_CAPTURE = 1;
-    static final int REQUEST_TAKE_PHOTO = 1;
-    private String mCurrentPhotoPath;
-    private Bitmap imageBitmap;
-
-    private static final String JPEG_FILE_PREFIX = "IMG_";
-    private static final String JPEG_FILE_SUFFIX = ".jpg";
-
-    private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
-     /*************************************************************************************/
-
-    /*private boolean pendingIntroAnimation;
-    private static final int ANIM_DURATION_FAB = 400;
-    private static final int ANIM_DURATION_TOOLBAR = 300;
-
-    private File mFichierPhoto;
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    static final int REQUEST_TAKE_PHOTO = 1;
-    private String mCurrentPhotoPath;
-    private ImageView imageViewPhoto;
-
-    private static final int SELECT_PICTURE = 1;*/
 
     public static final String ACTION_SHOW_LOADING_ITEM = "action_show_loading_item";
-    // private static final int PHOTO_RESULT = 0;
 
     /***
      *
@@ -117,7 +65,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        context = this;
         global = (GlobalVariable)getApplication();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -126,9 +73,6 @@ public class MainActivity extends AppCompatActivity
         initComponents();
         prepareActionBar(toolbar);
         displayView(R.id.nav_home, "Accueil");
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO)    mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
-        else     mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -143,6 +87,7 @@ public class MainActivity extends AppCompatActivity
 
         f_exams = new ExamsFragment();
         f_cart = new CartFragment();
+        f_supervisor = new AskCotationFragment();
     }
 
     private void prepareActionBar(Toolbar toolbar) {
@@ -274,6 +219,11 @@ public class MainActivity extends AppCompatActivity
         view.setText(String.valueOf(count));
     }
 
+    /**
+     *
+     * @param id
+     * @param title
+     */
     private void displayView(int id, String title) {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowCustomEnabled(false);
@@ -293,7 +243,12 @@ public class MainActivity extends AppCompatActivity
                 // fragment = new CartFragment();
                 fragmentTransaction.replace(R.id.frame_content, f_cart, "Cart");
                 break;
+            case R.id.nav_supervisor:
+
+                fragmentTransaction.replace(R.id.frame_content, f_supervisor, "Supervisor");
+                break;
             default:
+
                 break;
         }
 
@@ -310,71 +265,14 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
-    private File createImageFile() throws IOException {
-        // Création du nom de l'image qui sera prise
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        // prefixe
-        String imageFileName = JPEG_FILE_PREFIX + timeStamp + "_";
-        // Chemin de stockage ou dossier
-        File albumF = getAlbumDir();
-        File imageF = File.createTempFile(imageFileName, JPEG_FILE_SUFFIX, albumF);
-        return imageF;
-    }
-
-    private String getAlbumName() {
-        return getString(R.string.album_name);
-    }
-
-    private File getAlbumDir() {
-        File storageDir = null;
-        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            storageDir = mAlbumStorageDirFactory.getAlbumStorageDir(getAlbumName());
-            if (storageDir != null) {
-                if (! storageDir.mkdirs()) {
-                    if (! storageDir.exists()){
-                        afficheTost(context, "Echec de la création du dossier");
-                        return null;
-                    }
-                }
-            }
-        } else    afficheTost(context, "L'espace de stockage externe non monté.");
-        return storageDir;
-    }
-
-    private void dispatchGoTakePhotoIntent() {
-        Intent goTakePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (goTakePhotoIntent.resolveActivity(getPackageManager()) != null) {
-            // Créer le fichier où ira la photo
-            File photoFile = null;
-            try {
-                photoFile = createImageFile();
-                // Enregistrer un fichier : chemin d'accès pour une utilisation avec l'intents ACTION_VIEW
-                mCurrentPhotoPath = photoFile.getAbsolutePath();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-                mCurrentPhotoPath = null;
-            }
-
-            if (photoFile != null) {
-                goTakePhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
-                setResult(RESULT_OK, goTakePhotoIntent);
-                startActivityForResult(goTakePhotoIntent, REQUEST_TAKE_PHOTO);
-            }
-        }
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+        /*if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
             if (data != null) {
                 Bundle extras = data.getExtras();
                 imageBitmap = (Bitmap) extras.get("data");
-
-                afficheTost(context, "L'image :: " + imageBitmap + " :: bien reçu pour son affichage");
             } else    afficheTost(context, "Aucun intent récupéré...");
-        }
+        }*/
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -397,5 +295,4 @@ public class MainActivity extends AppCompatActivity
         monToast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL, 0, 0);
         monToast.show();
     }
-
 }

@@ -142,15 +142,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginLeft="37dp"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageButton
+                        android:id="@+id/envoyer_par_mail"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_email_white_24dp"
+                        android:background="@drawable/btn_capture_options" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:layout_marginRight="37dp"
                     android:layout_alignParentRight="true">
 
                     <ImageButton
-                        android:id="@+id/envoyer_capture"
+                        android:id="@+id/envoyer_par_whatsapp"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_add_white_24dp"
+                        android:src="@drawable/call_whatsapp"
                         android:background="@drawable/btn_capture_options" />
 
                 </FrameLayout>
