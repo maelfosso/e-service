@@ -45,8 +45,7 @@ public class ExamsFragment extends Fragment implements ExamsListAdapter.OnExamCl
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_exams, container, false);
         this.getActivity().setTitle("Accueil");

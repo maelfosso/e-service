@@ -27,7 +27,7 @@
                 android:src="@drawable/ic_close_white_24dp"
                 android:background="@drawable/btn_default_light" />
 
-            <View
+            <!-- <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1" />
@@ -46,7 +46,7 @@
                 android:layout_height="48dp"
                 android:layout_marginLeft="24dp"
                 android:background="@drawable/btn_default_light"
-                android:src="@drawable/ic_camera_rear_white_24dp" />
+                android:src="@drawable/ic_camera_rear_white_24dp" /> -->>
 
         </LinearLayout>
 
@@ -141,47 +141,19 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:src="@drawable/ic_menu_send"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp" />
-
-                </FrameLayout>
-               <!-- <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginLeft="37dp"
-                    android:layout_alignParentLeft="true">
+                    android:layout_centerHorizontal="true">
 
                     <ImageButton
-                        android:id="@+id/envoyer_par_mail"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:id="@+id/connect_customer"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_email_white_24dp"
-                        android:background="@drawable/btn_capture_options" />
+                        android:src="@drawable/ic_send_white_18dp"
+                        android:background="@drawable/btn_connect" />
 
                 </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginRight="37dp"
-                    android:layout_alignParentRight="true">
-
-                    <ImageButton
-                        android:id="@+id/envoyer_par_whatsapp"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/call_whatsapp"
-                        android:background="@drawable/btn_capture_options" />
-
-                </FrameLayout>-->
 
             </RelativeLayout>
 
