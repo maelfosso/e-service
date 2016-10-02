@@ -41,7 +41,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 int[] startingLocation = new int[2];
                 view.getLocationOnScreen(startingLocation);
                 startingLocation[0] += view.getWidth() / 2;
-
                 TakePhotoMainActivity.startCameraFromLocation(startingLocation, this);
                 overridePendingTransition(0, 0);
                 break;

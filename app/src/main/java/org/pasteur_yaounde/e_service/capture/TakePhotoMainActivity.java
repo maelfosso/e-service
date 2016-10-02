@@ -70,8 +70,8 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
     @Bind(R.id.vRevealBackground) RevealBackgroundView vRevealBackground;
 
     @Bind(R.id.annulerCapture) ImageButton btnAnnuler;
-    @Bind(R.id.grid_on) ImageButton btnGridOn;
-    @Bind(R.id.camera_rear) ImageButton btnCamera;
+    // @Bind(R.id.grid_on) ImageButton btnGridOn;
+    // @Bind(R.id.camera_rear) ImageButton btnCamera;
 
     @Bind(R.id.vPhotoRoot) View vTakePhotoRoot;
     @Bind(R.id.ivTakenPhoto) ImageView ivTakenPhoto;
@@ -83,7 +83,9 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
     @Bind(R.id.btnTakePhoto) Button btnCapturePhoto;
     @Bind(R.id.prendre_video) ImageButton btnCaptureVideo;
 
-    /*@Bind(R.id.envoyer_par_mail) ImageButton btnEnvoyerMail;
+    @Bind(R.id.connect_customer) ImageButton btnConnectCoustomer;
+
+    /*
     @Bind(R.id.envoyer_par_whatsapp) ImageButton btnEnvoyerWhatsApp;*/
 
     private boolean pendingIntro;
@@ -115,18 +117,18 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO)   mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
         else    mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 
-        /*btnEnvoyerMail.setOnClickListener(new View.OnClickListener() {
+        btnConnectCoustomer.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if(v.getId() == R.id.envoyer_par_mail){
-                    MainActivity.afficheTost(eContext, "Envoyer par mail?");
-                    onSendByEmail(new Uri[]{Uri.fromFile(photoPath)});
-                    backToCapture();
+                if(v.getId() == R.id.connect_customer){
+                    MainActivity.afficheTost(eContext, "Départ pour la création de compte...");
+                    /*onSendByEmail(new Uri[]{Uri.fromFile(photoPath)});
+                    backToCapture();*/
                 }
             }
         });
-
+        /*
         btnEnvoyerWhatsApp.setOnClickListener(new View.OnClickListener() {
 
             @Override
