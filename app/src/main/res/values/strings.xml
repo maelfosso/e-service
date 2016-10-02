@@ -46,4 +46,12 @@
     <string name="payment_code">Code de paiement</string>
     <string name="payment_code_help">Obtenez votre code de paiement en composant votre numero USSD habituel</string>
     <string name="title_activity_take_appointment">Appointment</string>
+
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_password">Password</string>
+    <string name="i_have_account">I have an account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
 </resources>

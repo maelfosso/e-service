@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hint_phone_number">Numero de telephone</string>
+    <string name="hint_first_name">Nom</string>
+    <string name="hint_last_name">Prenom</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="i_have_account">J\'ai un compte</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="sign_in">Se connecter</string>
+
+</resources>

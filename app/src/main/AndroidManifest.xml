@@ -58,7 +58,8 @@
             android:name=".TakeAppointmentActivity"
             android:label="@string/title_activity_take_appointment"
             android:theme="@style/AppTheme" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>

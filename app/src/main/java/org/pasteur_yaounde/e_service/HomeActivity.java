@@ -35,6 +35,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.lyt_connexion:
+                Intent intent = new Intent(this, SignUpActivity.class);
+                startActivity(intent);
 
                 break;
             case R.id.lyt_take_photo:

@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorPrimarySecond">#049043</color>
+    <color name="colorPrimaryThird">#FFFF00</color>
 
     <color name="fab_color_pressed">#007787</color>
     <color name="texte_color">#212121</color>
