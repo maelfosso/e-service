@@ -14,13 +14,15 @@
             android:title="@string/menu_cart"
             app:actionLayout="@layout/menu_counter"/>
         <item
-            android:id="@+id/nav_new"
-            android:icon="@drawable/ic_nav_new"
-            android:title="@string/menu_new"/>
-        <item
             android:id="@+id/nav_promo"
             android:icon="@drawable/ic_nav_promotion"
             android:title="@string/menu_promotions"/>
+
+        <item
+            android:id="@+id/nav_new"
+            android:icon="@drawable/ic_history"
+            android:title="@string/menu_historical"/>
+
     </group>
 
     <item android:title="Administrate">

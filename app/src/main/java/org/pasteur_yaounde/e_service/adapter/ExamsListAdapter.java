@@ -77,17 +77,11 @@ public class ExamsListAdapter extends RecyclerView.Adapter<ExamsListAdapter.View
         holder.price.setText(String.valueOf(e.getPrice() + " Fcfa"));
         holder.duration.setText(String.valueOf(e.getDuration() + " j"));
 
-        Log.d(TAG, e.toString());
-        Log.d(TAG, e.getName() + " --- " + global.isCartExist(e));
         if (global.isCartExist(e)) {
             holder.handle.setImageResource(R.drawable.ic_remove_shopping_cart_white_18dp);
         } else {
             holder.handle.setImageResource(R.drawable.ic_add_shopping_cart_white_18dp);
         }
-        // holder.handle.setTag(e);
-
-        // Here you apply the animation when the view is bound
-        // setAnimation(holder.itemView, position);
 
         holder.lyt_parent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,8 +154,11 @@ public class ExamsListAdapter extends RecyclerView.Adapter<ExamsListAdapter.View
             final List<Exam> result_list = new ArrayList<>(list.size());
 
             for (int i = 0; i < list.size(); i++) {
-                String str_title = list.get(i).getName();
-                if (str_title.toLowerCase().contains(query)) {
+                Exam exam = list.get(i);
+                // String str_title = list.get(i).getName();
+                // String str_desription =
+                if (exam.getName().toLowerCase().contains(query) ||
+                        exam.getDescription().toLowerCase().contains(query)) {
                     result_list.add(list.get(i));
                 }
             }

@@ -2,12 +2,17 @@ package org.pasteur_yaounde.e_service.fragment;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -28,8 +33,16 @@ public class ExamsFragment extends Fragment implements ExamsListAdapter.OnExamCl
     private FloatingActionButton takePhoto;
     private RecyclerView recyclerView;
 
-    private ExamsListAdapter adapter;
+    public ExamsListAdapter adapter;
     private GlobalVariable global;
+
+    private boolean isSearch = false;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // setHasOptionsMenu(true);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -72,6 +85,81 @@ public class ExamsFragment extends Fragment implements ExamsListAdapter.OnExamCl
         TakePhotoMainActivity.startCameraFromLocation(startingLocation, getActivity());
         getActivity().overridePendingTransition(0, 0);
     }
+
+    /*
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        // MenuInflater inflater = getMenuInflater();
+        inflater.inflate(isSearch ? R.menu.menu_search_toolbar : R.menu.menu_main, menu);
+
+        if (isSearch) {
+            final SearchView search = (SearchView) menu.findItem(R.id.action_search).getActionView();
+            search.setIconified(false);
+            search.setQueryHint("Search exams...");
+            search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String s) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    adapter.getFilter().filter(s);
+                    return true;
+                }
+            });
+            search.setOnCloseListener(new SearchView.OnCloseListener() {
+                @Override
+                public boolean onClose() {
+                    closeSearch();
+                    return true;
+                }
+            });
+        }
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.action_search: {
+                isSearch = true;
+                searchToolbar.setVisibility(View.VISIBLE);
+                prepareActionBar(searchToolbar);
+                supportInvalidateOptionsMenu();
+                return true;
+            }
+            case R.id.action_cart: {
+                Snackbar.make(parentView, "Cart Clicked", Snackbar.LENGTH_SHORT).show();
+                return true;
+            }
+            case R.id.action_filter_category: {
+                Snackbar.make(parentView, "Filter by Category Clicked", Snackbar.LENGTH_SHORT).show();
+            }
+            case android.R.id.home:
+                closeSearch();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void closeSearch() {
+        if (isSearch) {
+            isSearch = false;
+            prepareActionBar(toolbar);
+            searchToolbar.setVisibility(View.GONE);
+            supportInvalidateOptionsMenu();
+        }
+    }
+    }*/
 
     @Override
     public void onExamClick(View view, Exam exam, int position) {

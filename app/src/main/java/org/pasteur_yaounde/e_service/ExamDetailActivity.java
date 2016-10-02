@@ -163,6 +163,7 @@ public class ExamDetailActivity extends AppCompatActivity {
         }else{
             lyt_notfound.setVisibility(View.GONE);
         }
+
         dialog.show();
         dialog.getWindow().setAttributes(lp);
     }

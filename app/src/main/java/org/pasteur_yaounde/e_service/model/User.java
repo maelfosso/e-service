@@ -1,5 +1,7 @@
 package org.pasteur_yaounde.e_service.model;
 
+import java.util.Arrays;
+
 /**
  * Created by Mael FOSSO on 10/03/2016.
  */
@@ -149,5 +151,18 @@ public class User {
      */
     public void setOneId_demande_cotation(String attender, int i) {
         this.id_demande_cotation[i] = attender;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", photo='" + photo + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", id_demande_cotation=" + Arrays.toString(id_demande_cotation) +
+                ", connexion='" + connexion + '\'' +
+                '}';
     }
 }

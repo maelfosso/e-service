@@ -2,6 +2,7 @@ package org.pasteur_yaounde.e_service.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,12 +88,15 @@ public class DemandeCotationAdapter extends RecyclerView.Adapter<DemandeCotation
             demandeViewHolder.description.setText(element.getDescription());
             User utilisateur = ServiceReturnData.getUserByIdDemandeCotationOfJson(
                                                         ServiceReturnData.getListeUserOfJson(tcontext), element);
+            Log.d(getClass().getName(), utilisateur.toString());
             Picasso.with(tcontext)
-                    .load(tcontext.getResources().getIdentifier(utilisateur.getPhoto(), "drawable", tcontext.getPackageName()))
+                    //.load(tcontext.getResources().getIdentifier(utilisateur.getPhoto(), "drawable", tcontext.getPackageName()))
+                    .load(tcontext.getResources().getIdentifier(utilisateur.getPhoto(), null, tcontext.getPackageName()))
                     .resize(50, 50)
                     .into(demandeViewHolder.imagUser);
             Picasso.with(tcontext)
-                    .load(tcontext.getResources().getIdentifier(element.getImage_demande(), "drawable", tcontext.getPackageName()))
+                    // .load(tcontext.getResources().getIdentifier(element.getImage_demande(), "drawable", tcontext.getPackageName()))
+                    .load(tcontext.getResources().getIdentifier(element.getImage_demande(), null, tcontext.getPackageName()))
                     .resize(50, 50)
                     .into(demandeViewHolder.imageDemandeCotation);
 

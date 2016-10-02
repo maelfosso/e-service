@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private boolean isSearch = false;
     private GlobalVariable global;
 
+    private ExamsFragment f_exams;
+    private CartFragment f_cart;
+    private AskCotationFragment f_supervisor;
+
+
     public static final String ACTION_SHOW_LOADING_ITEM = "action_show_loading_item";
 
     /***
@@ -78,7 +83,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         searchToolbar = (Toolbar) findViewById(R.id.toolbar_search);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        // recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
+        f_exams = new ExamsFragment();
+        f_cart = new CartFragment();
+        f_supervisor = new AskCotationFragment();
     }
 
     private void prepareActionBar(Toolbar toolbar) {
@@ -127,10 +136,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         inflater.inflate(isSearch ? R.menu.menu_search_toolbar : R.menu.menu_main, menu);
 
         if (isSearch) {
-            //Toast.makeText(getApplicationContext(), "Search " + isSearch, Toast.LENGTH_SHORT).show();
             final SearchView search = (SearchView) menu.findItem(R.id.action_search).getActionView();
             search.setIconified(false);
             search.setQueryHint("Search exams...");
+
             search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String s) {
@@ -139,7 +148,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 @Override
                 public boolean onQueryTextChange(String s) {
-                    /*adapter.getFilter().filter(s);*/
+                    if ((ExamsFragment) getSupportFragmentManager().findFragmentByTag("Exams") != null) {
+                        f_exams.adapter.getFilter().filter(s);
+                    } else if ((CartFragment) getSupportFragmentManager().findFragmentByTag("Cart") != null) {
+                        f_cart.adapter.getFilter().filter(s);
+                    }
+
                     return true;
                 }
             });
@@ -157,9 +171,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         switch (id) {
@@ -219,24 +230,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         actionBar.setDisplayShowTitleEnabled(true);
         Fragment fragment = null;
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         Bundle bundle = new Bundle();
         switch (id) {
-            case R.id.nav_home:    fragment = new ExamsFragment();    break;
-            case R.id.nav_cart:    fragment = new CartFragment();    break;
-            case R.id.nav_supervisor:    afficheTost(this, "Voir la liste des demandes de cotation...");
-                fragment = new AskCotationFragment();
+            case R.id.nav_home:
+                // fragment = new ExamsFragment();
+                fragmentTransaction.replace(R.id.frame_content, f_exams, "Exams");
                 break;
-            default:    break;
+            case R.id.nav_cart:
+                // fragment = new CartFragment();
+                fragmentTransaction.replace(R.id.frame_content, f_cart, "Cart");
+                break;
+            case R.id.nav_supervisor:
+
+                fragmentTransaction.replace(R.id.frame_content, f_supervisor, "Supervisor");
+                break;
+            default:
+
+                break;
         }
 
-        fragment.setArguments(bundle);
-
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frame_content, fragment);
-            fragmentTransaction.commit();
-        }
+        // fragment.setArguments(bundle);
+        fragmentTransaction.commit();
     }
 
     private void closeSearch() {

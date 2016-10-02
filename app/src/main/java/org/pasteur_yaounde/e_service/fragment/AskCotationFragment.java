@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class AskCotationFragment extends Fragment implements DemandeCotationAdapter.DemandeCotationClickListener {
     private GlobalVariable global;
     private LinearLayoutManager recyclerManager = null;
-    private RecyclerView recyclerViewEService = null;
+    private RecyclerView recyclerView = null;
 
     private DemandeCotationAdapter askAdapter = null;
     // Variables permettant de contenir les objets
@@ -38,7 +38,7 @@ public class AskCotationFragment extends Fragment implements DemandeCotationAdap
         this.getActivity().setTitle("Taitment des demandes");
         global = (GlobalVariable)getActivity().getApplication();
 
-        recyclerViewEService = (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         initRecyclerView();
 
         return view;
@@ -51,20 +51,21 @@ public class AskCotationFragment extends Fragment implements DemandeCotationAdap
         // Utiliser un gestionnaire de layout linéaire
         recyclerManager = new LinearLayoutManager(getActivity());
         recyclerManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerViewEService.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewEService.setLayoutManager(recyclerManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setLayoutManager(recyclerManager);
         // Amélioration des performances pour améliorer la pprésentation du RecyclerView
-        recyclerViewEService.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
-        // recyclerViewEService.setLayoutManager(new LinearLayoutManager(getActivity()));
-        // recyclerViewEService.setHasFixedSize(true);
-        // recyclerViewEService.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+        // recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        // recyclerView.setHasFixedSize(true);
+        // recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
 
-        listContentDemandeCotation = new ArrayList<DemandeCotation>(0);
-        listContentDemandeCotation = Constant.getDemandeCotationData(getActivity());
-        askAdapter = new DemandeCotationAdapter(getActivity(), listContentDemandeCotation);
+        // listContentDemandeCotation = new ArrayList<DemandeCotation>(0);
+        // listContentDemandeCotation = Constant.getDemandeCotationData(getActivity());
+        // askAdapter = new DemandeCotationAdapter(getActivity(), listContentDemandeCotation);
+        askAdapter = new DemandeCotationAdapter(getActivity(), Constant.getDemandeCotationData(getActivity()));
         askAdapter.setClickListener(this);
-        recyclerViewEService.setAdapter(askAdapter);
+        recyclerView.setAdapter(askAdapter);
     }
 
     /**

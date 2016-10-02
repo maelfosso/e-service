@@ -3,43 +3,43 @@
     "id": "00000000",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "non",
-    "image_demande": "img_feed_center_1"
+    "image_demande": "@drawable/img_feed_center_1"
   },
   {
     "id": "00000001",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "non",
-    "image_demande": "img_feed_center_2"
+    "image_demande": "@drawable/img_feed_center_2"
   },
   {
     "id": "00000002",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "oui",
-    "image_demande": "img_feed_center_1"
+    "image_demande": "@drawable/img_feed_center_1"
   },
   {
     "id": "00000003",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "non",
-    "image_demande": "img_feed_center_2"
+    "image_demande": "@drawable/img_feed_center_2"
   },
   {
     "id": "00000004",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "non",
-    "image_demande": "img_feed_center_1"
+    "image_demande": "@drawable/img_feed_center_1"
   },
   {
     "id": "00000005",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "non",
-    "image_demande": "img_feed_center_2"
+    "image_demande": "@drawable/img_feed_center_2"
   },
   {
     "id": "00000006",
     "description": "Kenkah Events is a platform for annoucing events and inform people",
     "etat_traitement": "non",
-    "image_demande": "img_feed_center_1"
+    "image_demande": "@drawable/img_feed_center_1"
   },
   {
     "id": "00000007",

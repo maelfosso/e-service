@@ -11,14 +11,14 @@ public class DemandeCotation {
     /**
      *
      */
-    public DemandeCotation() {
+    /*public DemandeCotation() {
         super();
-        this.id = "";
-        this.description = "";
-        this.etat_traitement = "";
-        this.image_demande = "";
+        // this.id = "";
+        // this.description = "";
+        // this.etat_traitement = "";
+        // this.image_demande = "";
     }
-
+    */
     /**
      *
      * @param id

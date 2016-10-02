@@ -164,13 +164,14 @@ public class Constant {
      * @return
      */
     public static ArrayList<DemandeCotation> getDemandeCotationData(Context ctx) {
-        String usersPath = "data/demande_cotation.json";
+        String usersPath = "demande_cotation.json";
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setDateFormat("yyyy-MM-dd");
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
         Gson gson = gsonBuilder.create();
-        Type contactTypeList = new TypeToken<Collection<DemandeCotation>>(){}.getType();
-        ArrayList<DemandeCotation> items = gson.fromJson(Constant.getFromAsset(ctx, usersPath), contactTypeList);
+        Type cotationTypeList = new TypeToken<Collection<DemandeCotation>>(){}.getType();
+        ArrayList<DemandeCotation> items = gson.fromJson(Constant.getFromAsset(ctx, usersPath), cotationTypeList);
+        Log.d(Constant.class.getName() + " DEMANDE_COTATION", "SIZE : " + items.size());
         return items;
     }
 
@@ -180,7 +181,7 @@ public class Constant {
      * @return
      */
     public static ArrayList<User> getUserData(Context ctx) {
-        String usersPath = "data/users.json";
+        String usersPath = "users.json";
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setDateFormat("yyyy-MM-dd");
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
