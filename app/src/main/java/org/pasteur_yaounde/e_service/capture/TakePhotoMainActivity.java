@@ -83,8 +83,8 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
     @Bind(R.id.btnTakePhoto) Button btnCapturePhoto;
     @Bind(R.id.prendre_video) ImageButton btnCaptureVideo;
 
-    @Bind(R.id.envoyer_par_mail) ImageButton btnEnvoyerMail;
-    @Bind(R.id.envoyer_par_whatsapp) ImageButton btnEnvoyerWhatsApp;
+    /*@Bind(R.id.envoyer_par_mail) ImageButton btnEnvoyerMail;
+    @Bind(R.id.envoyer_par_whatsapp) ImageButton btnEnvoyerWhatsApp;*/
 
     private boolean pendingIntro;
     private int currentState;
@@ -115,7 +115,7 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO)   mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
         else    mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 
-        btnEnvoyerMail.setOnClickListener(new View.OnClickListener() {
+        /*btnEnvoyerMail.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -137,7 +137,7 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
                     backToCapture();
                 }
             }
-        });
+        });*/
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

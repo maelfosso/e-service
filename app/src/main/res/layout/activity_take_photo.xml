@@ -141,6 +141,17 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:src="@drawable/ic_menu_send"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                </FrameLayout>
+               <!-- <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginLeft="37dp"
                     android:layout_alignParentLeft="true">
@@ -170,7 +181,7 @@
                         android:src="@drawable/call_whatsapp"
                         android:background="@drawable/btn_capture_options" />
 
-                </FrameLayout>
+                </FrameLayout>-->
 
             </RelativeLayout>
 
