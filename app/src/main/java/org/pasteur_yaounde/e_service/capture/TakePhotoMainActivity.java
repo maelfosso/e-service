@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 // import hugo.weaving.DebugLog;
 
@@ -109,6 +110,7 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_photo);
 
+        ButterKnife.bind(this);
         eContext = this;
 
         updateStatusBarColor();
