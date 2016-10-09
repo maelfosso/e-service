@@ -45,6 +45,7 @@ import butterknife.OnClick;
 // import hugo.weaving.DebugLog;
 
 import org.pasteur_yaounde.e_service.R;
+import org.pasteur_yaounde.e_service.SignUpActivity;
 import org.pasteur_yaounde.e_service.abstrait.AlbumStorageDirFactory;
 import org.pasteur_yaounde.e_service.abstrait.BaseAlbumDirFactory;
 import org.pasteur_yaounde.e_service.abstrait.FroyoAlbumDirFactory;
@@ -70,8 +71,7 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
     @Bind(R.id.vRevealBackground) RevealBackgroundView vRevealBackground;
 
     @Bind(R.id.annulerCapture) ImageButton btnAnnuler;
-    // @Bind(R.id.grid_on) ImageButton btnGridOn;
-    // @Bind(R.id.camera_rear) ImageButton btnCamera;
+    @Bind(R.id.finish_action) ImageButton btnFinishAction;
 
     @Bind(R.id.vPhotoRoot) View vTakePhotoRoot;
     @Bind(R.id.ivTakenPhoto) ImageView ivTakenPhoto;
@@ -117,12 +117,27 @@ public class TakePhotoMainActivity extends BaseActivity implements RevealBackgro
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO)   mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
         else    mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 
+        btnAnnuler.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(v.getId() == R.id.annulerCapture)    onBackPressed();
+            }
+        });
+        btnFinishAction.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(v.getId() == R.id.finish_action)    finish();
+            }
+        });
+
         btnConnectCoustomer.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 if(v.getId() == R.id.connect_customer){
-                    MainActivity.afficheTost(eContext, "Départ pour la création de compte...");
+                    startActivity(new Intent(eContext, SignUpActivity.class));
                     /*onSendByEmail(new Uri[]{Uri.fromFile(photoPath)});
                     backToCapture();*/
                 }

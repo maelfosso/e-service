@@ -32,44 +32,62 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/lyt_connexion"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:clickable="true">
+            android:clickable="true" >
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/imag_connexion"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_login_dark"
+                android:background="@drawable/btn_capture_options"/>
+
+            <!-- <ImageView
+                android:id="@+id/lyt_connexion"
                 android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_height="50dp"
+                android:src="@drawable/ic_login_dark" /> -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Connexion"
+                android:textColor="@android:color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lyt_take_photo"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:src="@drawable/ic_add_a_photo_white_48dp"
+            <ImageButton
+                android:id="@+id/take_photo"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_a_photo_white_36dp"
+                android:background="@drawable/btn_capture_options"/>
+
+            <!-- <ImageView
+                android:id="@+id/take_photo"
                 android:layout_width="50dp"
-                android:layout_height="50dp" />
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add_a_photo_white_48dp" /> -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Take a photo"
+                android:textColor="@android:color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
         </LinearLayout>
