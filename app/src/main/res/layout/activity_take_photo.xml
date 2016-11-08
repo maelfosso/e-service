@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <org.pasteur_yaounde.e_service.capture.view.RevealBackgroundView
+    <org.cpc.yaounde.eservice.capture.view.RevealBackgroundView
         android:id="@+id/vRevealBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -51,7 +51,7 @@
 
         </LinearLayout>
 
-        <org.pasteur_yaounde.e_service.capture.view.SquaredFrameLayout
+        <org.cpc.yaounde.eservice.capture.view.SquaredFrameLayout
             android:id="@+id/vPhotoRoot"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -77,7 +77,7 @@
                 android:visibility="gone"
                 android:background="#ffffff" />
 
-        </org.pasteur_yaounde.e_service.capture.view.SquaredFrameLayout>
+        </org.cpc.yaounde.eservice.capture.view.SquaredFrameLayout>
 
         <ViewFlipper
             android:id="@+id/flipperEltSpace"

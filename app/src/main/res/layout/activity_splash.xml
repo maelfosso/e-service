@@ -7,7 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@android:color/white"
-    tools:context="org.pasteur_yaounde.e_service.SplashActivity">
+    tools:context="org.cpc.yaounde.eservice.SplashActivity">
 
     <ImageView
         android:id="@+id/splash"

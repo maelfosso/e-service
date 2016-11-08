@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.pasteur_yaounde.e_service.SignUpActivity">
+    tools:context="org.cpc.yaounde.eservice.SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

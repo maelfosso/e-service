@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "org.pasteur_yaounde.e_service"
+        applicationId "org.cpc.yaounde.eservice"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
@@ -43,4 +43,5 @@ dependencies {
     compile 'com.google.android.gms:play-services:9.4.0'
     compile 'com.balysv:material-ripple:1.0.2'
     compile 'com.android.support:multidex:1.0.0'
+    compile 'com.github.nkzawa:socket.io-client:0.3.0'
 }

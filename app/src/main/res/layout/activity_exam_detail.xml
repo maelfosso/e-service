@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="org.pasteur_yaounde.e_service.ExamDetailActivity">
+    tools:context="org.cpc.yaounde.eservice.ExamDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

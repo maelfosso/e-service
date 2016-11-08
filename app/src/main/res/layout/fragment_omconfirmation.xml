@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.pasteur_yaounde.e_service.fragment.om.OMConfirmationFragment">
+    tools:context="org.cpc.yaounde.eservice.fragment.om.OMConfirmationFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
