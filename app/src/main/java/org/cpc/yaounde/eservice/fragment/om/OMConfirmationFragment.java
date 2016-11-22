@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 public class OMConfirmationFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match

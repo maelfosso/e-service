@@ -1,4 +1,4 @@
-package org.yaounde.eservice;
+package org.cpc.yaounde.eservice;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

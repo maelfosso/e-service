@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.model.Exam;
 
 import java.util.ArrayList;

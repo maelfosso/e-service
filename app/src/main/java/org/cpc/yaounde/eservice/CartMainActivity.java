@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 /**
  * Created by Franck on 09/08/2016.

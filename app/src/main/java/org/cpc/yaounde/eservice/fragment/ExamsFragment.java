@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import org.cpc.yaounde.eservice.data.Constant;
 import org.cpc.yaounde.eservice.model.Exam;
 import org.cpc.yaounde.eservice.ExamDetailActivity;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.adapter.ExamsListAdapter;
 import org.cpc.yaounde.eservice.capture.TakePhotoMainActivity;
 import org.cpc.yaounde.eservice.data.GlobalVariable;

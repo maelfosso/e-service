@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -1,0 +1,116 @@
+[
+  {
+    'user': {
+      'name': 'Anderson Thomas',
+      'photo': "@drawable/photo_male_1"
+    },
+    'snippet': 'Hi, Good morning',
+    'date': '09:45'
+  },
+  {
+    'user': {
+      'name': 'Miller Wilson',
+      'photo': "@drawable/photo_male_2"
+    },
+    'snippet': 'There s a chance I can make it.',
+    'date': '16:55'
+  },
+  {
+    'user': {
+      'name': 'Betty L',
+      'photo': "@drawable/photo_female_1"
+    },
+    'snippet': 'Wish I could come, but Im out of town this weekend',
+    'date': 'Yesterday'
+  },
+  {
+    'user': {
+      'name': 'Laura Michelle',
+      'photo': "@drawable/photo_female_2"
+    },
+    'snippet': 'Do you have any recomendations?',
+    'date': '11/4/2015'
+  },
+  {
+    'user': {
+      'name': 'Adams Green',
+      'photo': "@drawable/photo_male_3"
+    },
+    'snippet': 'She had probably only just gpt up and had not even begun to get dressed',
+    'date': '11/4/2015'
+  },
+
+  {
+    'user': {
+      'name': 'Garcia Lewis',
+      'photo': '@drawable/photo_female_3'
+    },
+    'snippet': 'Can we make some appointment',
+    'date': '11/2/2015'
+  },
+  {
+    'user': {
+      'name': 'Roberts Turner',
+      'photo': "@drawable/photo_male_4"
+    },
+    'snippet': 'Can we make some appointment',
+    'date': '10/20/2015'
+  },
+  {
+    'user': {
+      'name': 'Mary Jackson',
+      'photo': "@drawable/photo_female_4"
+    },
+    'snippet': 'Ok. We ll be there',
+    'date': '10/20/2015'
+  },
+  {
+    'user': {
+      'name': 'Sarah Scott',
+      'photo': '@drawable/photo_female_5'
+    },
+    'snippet': 'How about our work last week.',
+    'date': '10/19/2015'
+  },
+  {
+    'user': {
+      'name': 'Kevin John',
+      'photo': '@drawable/photo_male_5'
+    },
+    'snippet': 'Whatever your age',
+    'date': '10/12/2015'
+  },
+
+  {
+    'user': {
+      'name': 'Elizabeth',
+      'photo': '@drawable/photo_female_6'
+    },
+    'snippet': 'Headlines and top stories from business',
+    'date': '10/13/2015'
+  },
+  {
+    'user': {
+      'name': 'Evans Collins',
+      'photo': '@drawable/photo_male_6'
+    }
+  },
+  {
+    'user': {
+      'name': 'Roberts',
+      'photo': '@drawable/photo_male_7'
+    }
+  },
+  {
+    'user': {
+      'name': 'Betty C',
+      'photo': '@drawable/photo_female_7'
+    }
+  },
+  {
+    'user': {
+      'name': 'Susan Lee',
+      'photo': '@drawable/photo_female_7'
+    }
+  }
+]

@@ -11,6 +11,8 @@ import com.google.gson.reflect.TypeToken;
 
 import org.cpc.yaounde.eservice.model.DemandeCotation;
 import org.cpc.yaounde.eservice.model.Exam;
+import org.cpc.yaounde.eservice.model.Message;
+import org.cpc.yaounde.eservice.model.MessageDetails;
 import org.cpc.yaounde.eservice.model.User;
 
 import java.io.IOException;
@@ -175,11 +177,6 @@ public class Constant {
         return items;
     }
 
-    /**
-     *
-     * @param ctx
-     * @return
-     */
     public static ArrayList<User> getUserData(Context ctx) {
         String usersPath = "users.json";
         GsonBuilder gsonBuilder = new GsonBuilder();
@@ -188,6 +185,29 @@ public class Constant {
         Gson gson = gsonBuilder.create();
         Type contactTypeList = new TypeToken<Collection<User>>(){}.getType();
         ArrayList<User> items = gson.fromJson(Constant.getFromAsset(ctx, usersPath), contactTypeList);
+        return items;
+    }
+
+    public static ArrayList<Message> getMessagesData(Context ctx) {
+        String usersPath = "messages.json";
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
+        Gson gson = gsonBuilder.create();
+        Type contactTypeList = new TypeToken<Collection<Message>>(){}.getType();
+        ArrayList<Message> items = gson.fromJson(Constant.getFromAsset(ctx, usersPath), contactTypeList);
+        return items;
+    }
+
+    public static ArrayList<MessageDetails> getMessagesDetailsData(Context ctx, User user) {
+        String usersPath = "messages-details.json";
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
+        Gson gson = gsonBuilder.create();
+        Type contactTypeList = new TypeToken<Collection<MessageDetails>>(){}.getType();
+        ArrayList<MessageDetails> items = gson.fromJson(Constant.getFromAsset(ctx, usersPath), contactTypeList);
+        for (int i=0; i < items.size(); i++) {
+            items.get(i).setUser(user);
+        }
         return items;
     }
 }

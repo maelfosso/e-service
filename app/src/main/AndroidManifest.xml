@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.yaounde.eservice">
+    package="org.cpc.yaounde.eservice">
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -59,8 +59,10 @@
             android:name="org.cpc.yaounde.eservice.TakeAppointmentActivity"
             android:label="@string/title_activity_take_appointment"
             android:theme="@style/AppTheme" />
-        <activity android:name="org.cpc.yaounde.eservice.HomeActivity" />
-        <activity android:name="org.cpc.yaounde.eservice.SignUpActivity"></activity>
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name="org.cpc.yaounde.eservice.SignUpActivity" />
+        <activity android:name="org.cpc.yaounde.eservice.SignInActivity" />
+        <activity android:name="org.cpc.yaounde.eservice.MessageDetailsActivity"></activity>
     </application>
 
 </manifest>

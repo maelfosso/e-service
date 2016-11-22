@@ -25,11 +25,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.cpc.yaounde.eservice.fragment.CartFragment;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.fragment.MessageFragment;
+import org.cpc.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.adapter.ExamsListAdapter;
 import org.cpc.yaounde.eservice.data.GlobalVariable;
 import org.cpc.yaounde.eservice.fragment.AskCotationFragment;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private boolean isSearch = false;
     private GlobalVariable global;
 
+    private MessageFragment f_messages;
     private ExamsFragment f_exams;
     private CartFragment f_cart;
     private AskCotationFragment f_supervisor;
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         searchToolbar = (Toolbar) findViewById(R.id.toolbar_search);
         // recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
+        f_messages = new MessageFragment();
         f_exams = new ExamsFragment();
         f_cart = new CartFragment();
         f_supervisor = new AskCotationFragment();
@@ -182,6 +186,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 supportInvalidateOptionsMenu();
                 return true;
             }
+            case R.id.action_message: {
+                Snackbar.make(parentView, "Message Clicked", Snackbar.LENGTH_LONG).show();
+                return true;
+            }
             case R.id.action_cart: {
                 Snackbar.make(parentView, "Cart Clicked", Snackbar.LENGTH_SHORT).show();
                 return true;
@@ -237,11 +245,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Bundle bundle = new Bundle();
         switch (id) {
             case R.id.nav_home:
-                // fragment = new ExamsFragment();
                 fragmentTransaction.replace(R.id.frame_content, f_exams, "Exams");
                 break;
+            case R.id.nav_message:
+                fragmentTransaction.replace(R.id.frame_content, f_messages, "Messages");
+                break;
             case R.id.nav_cart:
-                // fragment = new CartFragment();
                 fragmentTransaction.replace(R.id.frame_content, f_cart, "Cart");
                 break;
             case R.id.nav_supervisor:
@@ -296,4 +305,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         monToast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL, 0, 0);
         monToast.show();
     }
+
+    /*public void setVisibilityAppBar(boolean visible){
+        CoordinatorLayout.LayoutParams layout_visible = new CoordinatorLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        CoordinatorLayout.LayoutParams layout_invisible = new CoordinatorLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0);
+        if(visible){
+            appBarLayout.setLayoutParams(layout_visible);
+            fab.show();
+        }else{
+            appBarLayout.setLayoutParams(layout_invisible);
+            fab.hide();
+        }
+    }*/
 }

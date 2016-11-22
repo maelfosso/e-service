@@ -17,6 +17,13 @@
         android:icon="@drawable/action_search"/>
 
     <item
+        android:id="@+id/action_message"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="@string/action_message"
+        android:icon="@drawable/ic_menu_message" />
+
+    <item
         android:id="@+id/action_cart"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"

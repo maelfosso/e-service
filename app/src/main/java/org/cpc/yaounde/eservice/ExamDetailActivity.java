@@ -28,7 +28,7 @@ import org.cpc.yaounde.eservice.adapter.CartListAdapter;
 import org.cpc.yaounde.eservice.data.GlobalVariable;
 import org.cpc.yaounde.eservice.model.Exam;
 import org.cpc.yaounde.eservice.widget.DividerItemDecoration;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 public class ExamDetailActivity extends AppCompatActivity {
     public static final String EXTRA_OBJCT = "org.pasteur_yaounde.e_service.EXAM";

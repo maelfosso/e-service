@@ -32,7 +32,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 import static android.view.GestureDetector.SimpleOnGestureListener;
 

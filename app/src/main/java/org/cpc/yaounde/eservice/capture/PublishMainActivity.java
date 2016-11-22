@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 
 import org.cpc.yaounde.eservice.MainActivity;
 import org.cpc.yaounde.eservice.utils.Utils;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 import butterknife.Bind;
 import butterknife.OnCheckedChanged;

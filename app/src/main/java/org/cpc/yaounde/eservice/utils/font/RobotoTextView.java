@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 public class RobotoTextView extends TextView {
 

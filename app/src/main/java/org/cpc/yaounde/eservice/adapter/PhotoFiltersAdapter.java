@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 /**
  * Created by froger_mcs on 11.11.14.

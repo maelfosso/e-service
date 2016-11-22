@@ -24,7 +24,7 @@ import com.squareup.picasso.Picasso;
 
 import org.cpc.yaounde.eservice.adapter.CartListAdapter;
 import org.cpc.yaounde.eservice.OMPaymentActivity;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.data.GlobalVariable;
 import org.cpc.yaounde.eservice.model.Exam;
 import org.cpc.yaounde.eservice.widget.DividerItemDecoration;

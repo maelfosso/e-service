@@ -1,11 +1,12 @@
 package org.cpc.yaounde.eservice.model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by Mael FOSSO on 10/03/2016.
  */
-public class User {
+public class User implements Serializable {
     public String id;
     public String name;
     public String photo;
@@ -13,28 +14,11 @@ public class User {
     public String password;
     public String[] id_demande_cotation;
     public String connexion;
-    /**
-     *
-     */
+
     public User() {
         super();
-        // TODO Auto-generated constructor stub
-        this.id = "";
-        this.name = "";
-        this.photo = "";
-        this.login = "";
-        this.password = "";
-        this.id_demande_cotation = null;
-        this.connexion = "";
     }
-    /**
-     * @param id
-     * @param name
-     * @param photo
-     * @param login
-     * @param password
-     * @param connexion
-     */
+
     public User(String id, String name, String photo, String login, String password, String[] demande_id, String connexion) {
         super();
         this.id = id;
@@ -45,27 +29,19 @@ public class User {
         this.id_demande_cotation = demande_id;
         this.connexion = connexion;
     }
-    /**
-     * @return the id
-     */
+
     public String getId() {
         return id;
     }
-    /**
-     * @param id the id to set
-     */
+
     public void setId(String id) {
         this.id = id;
     }
-    /**
-     * @return the name
-     */
+
     public String getName() {
         return name;
     }
-    /**
-     * @param name the name to set
-     */
+
     public void setName(String name) {
         this.name = name;
     }

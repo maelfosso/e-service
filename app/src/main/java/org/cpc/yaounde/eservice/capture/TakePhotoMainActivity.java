@@ -48,7 +48,7 @@ import org.cpc.yaounde.eservice.abstrait.BaseAlbumDirFactory;
 import org.cpc.yaounde.eservice.abstrait.FroyoAlbumDirFactory;
 import org.cpc.yaounde.eservice.capture.view.RevealBackgroundView;
 import org.cpc.yaounde.eservice.utils.Utils;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 /**
  * Created by Franck on 10/08/2016.

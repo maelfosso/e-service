@@ -17,7 +17,7 @@ import android.widget.TextView;
 import org.cpc.yaounde.eservice.adapter.PageAdapter;
 import org.cpc.yaounde.eservice.fragment.om.OMPaymentFragment;
 import org.cpc.yaounde.eservice.fragment.om.OMTraitmentFragment;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.fragment.om.OMConfirmationFragment;
 
 import java.util.ArrayList;

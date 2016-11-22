@@ -22,7 +22,7 @@ import android.widget.FrameLayout;
 
 import org.cpc.yaounde.eservice.utils.anim_action_user.DefaultAnimationHandler;
 import org.cpc.yaounde.eservice.utils.anim_action_user.MenuAnimationHandler;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 import java.util.ArrayList;
 import java.util.List;

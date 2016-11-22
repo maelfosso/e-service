@@ -7,7 +7,7 @@ import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 /**
  * Created by maelfosso on 8/2/16.

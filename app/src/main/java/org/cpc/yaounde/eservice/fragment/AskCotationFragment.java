@@ -15,7 +15,7 @@ import org.cpc.yaounde.eservice.adapter.DemandeCotationAdapter;
 import org.cpc.yaounde.eservice.data.Constant;
 import org.cpc.yaounde.eservice.data.GlobalVariable;
 import org.cpc.yaounde.eservice.model.DemandeCotation;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 import java.util.ArrayList;
 

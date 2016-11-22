@@ -7,7 +7,6 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
-import org.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.utils.Tools;
 
 import java.util.Timer;
@@ -26,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 // go to the main activity
                 // Intent i = new Intent(SplashActivity.this, MainActivity.class);
-                Intent i = new Intent(SplashActivity.this, HomeActivity.class);
+                Intent i = new Intent(SplashActivity.this, WelcomeActivity.class);
                 startActivity(i);
                 // kill current activity
                 finish();

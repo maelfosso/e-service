@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 public class TakeAppointmentActivity extends AppCompatActivity {
 

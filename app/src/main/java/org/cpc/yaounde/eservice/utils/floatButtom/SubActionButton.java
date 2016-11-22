@@ -10,7 +10,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 /**
  * A simple button implementation with a similar look an feel to{@link FloatingActionButton}.

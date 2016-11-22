@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import org.cpc.yaounde.eservice.web_interface.ServiceReturnData;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 import org.cpc.yaounde.eservice.data.GlobalVariable;
 import org.cpc.yaounde.eservice.model.DemandeCotation;
 import org.cpc.yaounde.eservice.model.User;

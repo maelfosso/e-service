@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import org.cpc.yaounde.eservice.data.GlobalVariable;
 import org.cpc.yaounde.eservice.model.Exam;
-import org.yaounde.eservice.R;
+import org.cpc.yaounde.eservice.R;
 
 import java.util.ArrayList;
 import java.util.List;
